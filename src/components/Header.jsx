@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import "./Header.css";
-import HomePage from "../pages/HomePage";
 
 export default function Header() {
   return (
