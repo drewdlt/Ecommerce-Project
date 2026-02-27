@@ -40,8 +40,6 @@ export function TrackingPage({ cart }) {
   let isShipped = deliveryPercent >= 33 && deliveryPercent < 100;
   let isDelivered = deliveryPercent === 100;
 
-  console.log(isPreparing, isShipped, isDelivered);
-
   return (
     <>
       <title>Tracking</title>
