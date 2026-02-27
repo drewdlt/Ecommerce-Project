@@ -8,6 +8,9 @@ import axios from "axios";
 import { TrackingPage } from "./pages//tracking/TrackingPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
+// This makes axios avaliable in the Console.
+window.axios = axios;
+
 function App() {
   const [cart, setCart] = useState([]);
 
