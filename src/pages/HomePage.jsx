@@ -3,6 +3,14 @@ import "./HomePage.css";
 import { products } from "../../starting-code/data/products";
 
 export default function HomePage() {
+
+  fetch("http://localhost:3000/api/products")
+  .then((response) => {
+    return response.json();
+  }).then((data) => {
+      console.log(data);
+  });
+
   return (
     <>
       <title>Ecommerce Project</title>
@@ -15,14 +23,11 @@ export default function HomePage() {
             return (
               <div key={product.id} className="product-container">
                 <div className="product-image-container">
-                  <img
-                    className="product-image"
-                    src={product.image}
-                  />
+                  <img className="product-image" src={product.image} />
                 </div>
 
                 <div className="product-name limit-text-to-2-lines">
-                  { product.name }
+                  {product.name}
                 </div>
 
                 <div className="product-rating-container">
