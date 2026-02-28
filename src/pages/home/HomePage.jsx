@@ -5,7 +5,7 @@ import "./HomePage.css";
 import { ProductsGrid } from "./ProductsGrid";
 import { useSearchParams } from "react-router";
 
-export default function HomePage({ cart, loadCart }) {
+export function HomePage({ cart, loadCart }) {
   const [products, setProducts] = useState([]);
   const [searchParams] = useSearchParams();
   const search = searchParams.get("search");
